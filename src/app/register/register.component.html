@@ -1,0 +1,72 @@
+<div class="contenant">
+  <div id="wrapper">
+      <app-sidebar></app-sidebar>
+      <div id="content-wrapper" class="d-flex flex-column">
+          <div id="content">
+
+              <app-navbar></app-navbar>
+
+              <div id="container-fluid">
+                 <div class="container">
+                  <div class="row" >
+
+                  </div>
+                  <div class="shadow p-3 mb-5 bg-white rounded">
+                      <h2 class="text-center mb-4">Enregistrer un Administrateur</h2>
+
+                      <form class="user" [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+                          <div class="form-group row">
+                              <div class="col-sm-6 mb-3 mb-sm-0">
+                                  <input type="text" class="form-control form-control-user" formControlName="prenom" id="exampleFirstName"
+                                      placeholder="First Name">
+                              </div>
+                              <div class="col-sm-6">
+                                  <input type="text" class="form-control form-control-user" formControlName="nom" id="exampleLastName"
+                                      placeholder="Last Name">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <input type="email" class="form-control form-control-user" formControlName="email" id="exampleInputEmail"
+                                  placeholder="Email Address">
+                          </div>
+
+                             <div class="form-group">
+                              <div class="col-sm-6">
+                                <select formControlName="level" class="form-control" id="">
+                                  <option value="supérieur">Supérieur</option>
+                                  <option value="intermédaire">intermédaire Adminsitrateur</option>
+                                  <option value="inférieur">Inférieur</option>
+                                </select>
+                              </div>
+                             </div>
+
+                              <div class="form-group">
+                                <div class="col-sm-6">
+                                  <select formControlName="valide" class="form-control" id="">
+                                    <option value="actif">Activer</option>
+                                    <option value="non_actif">Désactiver</option>
+                                  </select>
+                                </div>
+                              </div>
+
+
+                              <div class="form-group">
+                                <input type="password" class="form-control form-control-user" formControlName="password" id="exampleInputEmail"
+                                    placeholder="votre mot de passe ">
+                            </div>
+                          <div class="col-sm-6">
+                              <input type="submit" value="envoyer" class="form-control btn btn-primary">
+                          </div>
+                          <hr>
+                      </form>
+                    </div>
+
+                 </div>
+
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

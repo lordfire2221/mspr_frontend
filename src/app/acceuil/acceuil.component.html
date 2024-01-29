@@ -1,0 +1,68 @@
+<div class="contenant">
+  <div id="wrapper">
+    <app-sidebar></app-sidebar>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+
+        <app-navbar></app-navbar>
+
+        <div id="container-fluid">
+          <div class="container">
+            <div style="text-align: center;color: rgb(66, 66, 228);"><strong><h2>Liste des processus</h2> </strong></div>
+
+            <div class="row" style="width: 70%; margin: 0 auto;">
+              <!-- Earnings (Monthly) Card Example -->
+
+              <!-- Pending Requests Card Example -->
+
+            </div>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <div class="form">
+
+              </div>
+              <!-- ... Votre code précédent ... -->
+
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>PID</th>
+                      <th>Name</th>
+                      <th>Username</th>
+                      <th>CPU %</th>
+                      <th>Time</th>
+                      <th>cmdline</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Utilisation de la directive *ngFor avec la pagination -->
+                    <tr *ngFor="let item of processes | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index">
+                      <td>{{ item.pid }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.username }}</td>
+                      <td>{{ item.create_time }}</td>
+                      <td>{{ item.cpu_percent }}</td>
+                      <td>{{ item.cmdline }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Ajout des contrôles de pagination en bas de la table -->
+                <div class="pagination">
+                  <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+                </div>
+              </div>
+
+              <!-- ... Votre code précédent ... -->
+
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
