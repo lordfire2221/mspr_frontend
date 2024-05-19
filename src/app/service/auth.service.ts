@@ -20,11 +20,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   signup(email:string , password:string): Observable<any> {
-    return this.http.post<Response>('http://oxarian.fr:5000/register', { email,password });
+    return this.http.post<Response>('http://192.168.20.2:5000/register', { email,password });
   }
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post<Response>('http://oxarian.fr:5000/login', { email, password });
+    return this.http.post<Response>('http://192.168.20.2:5000/login', { email, password });
   }
 
   logout(): void {

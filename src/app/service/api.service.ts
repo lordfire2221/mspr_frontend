@@ -7,7 +7,7 @@ import { Processus } from '../models/processus';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'http://oxarian.fr:5000';
+  apiUrl = 'http://192.168.20.2.fr:5000';
   constructor(private _http: HttpClient) {
   }
 
