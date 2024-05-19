@@ -9,14 +9,14 @@
 
               <div id="container-fluid">
                  <div class="container">
-                  <form class="user" [formGroup]="registerform" (ngSubmit)="onSubmit()">
+                  <form class="user" [formGroup]="registerform" (ngSubmit)="onSubmit()" style="width: 70%; margin:0% auto">
                     <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" formControlName="ip" id="exampleInputEmail"
+                      <input type="text" class="form-control form-control-user" formControlName="ip" id="exampleInputEmail"
                           placeholder="l'ip s'il vous plaît. ex : 10.0.0.1 ">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-user" formControlName="port" id="exampleInputEmail"
+                    <input type="text" class="form-control form-control-user" formControlName="port" id="exampleInputEmail"
                         placeholder="ex : 1-5000">
                 </div>
 

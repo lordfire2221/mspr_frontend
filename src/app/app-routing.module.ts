@@ -9,6 +9,7 @@ import { ListeLogsComponent } from './liste-logs/liste-logs.component';
 import { ControlePasswordComponent } from './controle-password/controle-password.component';
 import { VerifPasswordComponent } from './verif-password/verif-password.component';
 import { NmapScanComponent } from './nmap-scan/nmap-scan.component';
+import { HeaderHttpComponent } from './header-http/header-http.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'Login',pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'logs',component:ListeLogsComponent},
   {path:'controlle-password',component:ControlePasswordComponent},
   {path:'verif_port',component:VerifPasswordComponent},
-  {path:'nmap_scan',component:NmapScanComponent}
+  {path:'nmap_scan',component:NmapScanComponent},
+  {path:'headers_http',component:HeaderHttpComponent}
 ];
 
 @NgModule({

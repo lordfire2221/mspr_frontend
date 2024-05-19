@@ -17,7 +17,7 @@ export class ListeLogsComponent {
 
   //
   public currentPage: number = 1;
-  public itemsPerPage: number = 10;
+  public itemsPerPage: number = 5;
   public p: number = 1; // Declare the 'p' property
 
   // Utilisez MatTableDataSource pour activer la pagination avec MatPaginator

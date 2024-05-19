@@ -7,7 +7,7 @@ import { Processus } from '../models/processus';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'http://oxarian.fr:5000';
+  apiUrl = 'http://192.168.20.2:5000';
   constructor(private _http: HttpClient) {
   }
 
@@ -43,6 +43,10 @@ export class ApiService {
     return this._http.get<any>(`${this.apiUrl}/informations_network?interface=${interfaces}`);
   }
 
+  get_headers_http_scan(url: string): Observable<any> {
+    return this._http.get<any>(`${this.apiUrl}/get_headers_http?url=${url}`);
+  }
+
   // getProccessus() : Observable <Processus[]> {
   //    return this._http.get<Processus[]>(`${this.apiUrl}/running-processes`);
   // }
@@ -75,4 +79,6 @@ export class ApiService {
   verif_ip(info:any){
     return this._http.post(`${this.apiUrl}/verif_ip`,info,{reportProgress:true,observe:'events'})
   }
+
+
 }
