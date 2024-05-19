@@ -15,6 +15,10 @@ public information : any [] = []
 public ip : any
 public netmask : any
 
+public cpu!: number;
+  public memoire!: number;
+  public memory!: number;
+  
 constructor(private api:ApiService,private router :Router,private fb :FormBuilder){
   this.registerForm =fb.group({
     interface:['',[Validators.required,Validators.minLength(4)]]
@@ -37,6 +41,15 @@ ngOnInit(){
     (res:any) =>{
       this.data = res
     }
-  )
+  );
+
+
+  this.api.getRessources().subscribe(
+    (res: any) => {
+      this.cpu = res.cpu_percent;
+      this.memoire = res.disk_percent;
+      this.memory = res.memory_percent;
+    }
+  );
 }
 }

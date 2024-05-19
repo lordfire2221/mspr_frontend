@@ -28,6 +28,7 @@ import { ControlePasswordComponent } from './controle-password/controle-password
 import { NmapScanComponent } from './nmap-scan/nmap-scan.component';
 import { PaginationComponent } from './pagination/pagination.component'
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HeaderHttpComponent } from './header-http/header-http.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     VerifPasswordComponent,
     ControlePasswordComponent,
     NmapScanComponent,
-    PaginationComponent
+    PaginationComponent,
+    HeaderHttpComponent
   ],
   imports: [
     BrowserModule,
